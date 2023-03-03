@@ -14,6 +14,4 @@ public class ButtonAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         transform.localScale -= _scale;
     }
-
-
 }

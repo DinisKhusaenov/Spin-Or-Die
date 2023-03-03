@@ -93,5 +93,4 @@ public class Menu : MonoBehaviour
             _isMusicOn = true;
         }
     }
-
 }

@@ -11,7 +11,6 @@ public class ScoreCounter : MonoBehaviour
 
         if (Player.instance.PointsInGame > PlayerPrefs.GetInt("Record"))
             PlayerPrefs.SetInt("Record", Player.instance.PointsInGame);
-
     }
 
 }

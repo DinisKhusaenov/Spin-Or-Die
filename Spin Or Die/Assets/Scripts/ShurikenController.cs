@@ -14,7 +14,6 @@ public class ShurikenController : MonoBehaviour
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(-transform.position.x, transform.position.y) * Mathf.Rad2Deg);
 
         transform.DORotate(new Vector3(0, 0, 360), 1f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Incremental);
     }

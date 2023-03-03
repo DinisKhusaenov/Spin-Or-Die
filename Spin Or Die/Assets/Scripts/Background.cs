@@ -16,7 +16,6 @@ public class Background : MonoBehaviour
 
     private void Update()
     {
-
         float _cameraHeight = _camera.pixelHeight;
 
         var _bottomLeft = _camera.ScreenToWorldPoint(new Vector2(0, 0));
@@ -25,7 +24,6 @@ public class Background : MonoBehaviour
         var _height = new Vector2(_topLeft.x - _bottomLeft.x, _topLeft.y - _bottomLeft.y);
 
         float ScaleY = _height.magnitude;
-
         float ScaleX = ScaleY * Screen.width / Screen.height;
 
         transform.localScale = new Vector3(ScaleX / 19.2f, ScaleY / 10.7f, 1f);

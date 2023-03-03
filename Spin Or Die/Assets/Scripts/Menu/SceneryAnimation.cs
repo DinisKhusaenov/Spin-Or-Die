@@ -10,11 +10,21 @@ public class SceneryAnimation: MonoBehaviour
 
     private void Start()
     {
-        foreach (var star in _stars)
-            star.transform.DORotate(new Vector3(0, 0, 360), 10f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo);
+        StarsAnimation();
 
         PointAssigment();
 
+        StarsWithCornersAnimaton();
+    }
+
+    private void StarsAnimation()
+    {
+        foreach (var star in _stars)
+            star.transform.DORotate(new Vector3(0, 0, 360), 10f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo);
+    }
+
+    private void StarsWithCornersAnimaton()
+    {
         Tween tween = _circleWithCorners.transform.DOPath(_waypoints, 30f, PathType.CatmullRom).SetOptions(true);
         tween.SetEase(Ease.Linear).SetLoops(-1);
         _circleWithCorners.transform.DORotate(new Vector3(0, 0, 360), 10f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Yoyo);
